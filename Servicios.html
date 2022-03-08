@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Bus Fast</title>
+
+
+    <link rel="stylesheet" href="css/estilo.css">
+		<link rel="stylesheet" href="css/javaestilo.css">
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+</head>
+<body>
+
+
+    <header>
+
+        <a id="logo" href="index.html">
+            <img src="img/logo.jpg" alt="Logo">
+            <span>BUS FAST</span>
+        </a>
+
+
+        <nav>
+            <ul>
+                <li><a href="index.html">¿Quienes somos?</a></li>
+                <li><a href="Servicios.html">Servicios</a></li>
+                <li><a href="contacta.html">Contacta</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+<script type="text/javascript">
+$(function() {
+var Accordion = function(el, multiple) {
+	this.el = el || {};
+	// more then one submenu open?
+	this.multiple = multiple || false;
+
+	var dropdownlink = this.el.find('.dropdownlink');
+	dropdownlink.on('click',
+									{ el: this.el, multiple: this.multiple },
+									this.dropdown);
+};
+
+Accordion.prototype.dropdown = function(e) {
+	var $el = e.data.el,
+			$this = $(this),
+			//this is the ul.submenuItems
+			$next = $this.next();
+
+	$next.slideToggle();
+	$this.parent().toggleClass('open');
+
+	if(!e.data.multiple) {
+		//show only one menu at the same time
+		$el.find('.submenuItems').not($next).slideUp().parent().removeClass('open');
+	}
+}
+
+var accordion = new Accordion($('.accordion-menu'), false);
+})
+</script>
+		<main>
+<div class="vertical">
+	<h2>Transportes</h2>
+	<ul class="accordion-menu">
+	  <li>
+	    <div class="dropdownlink"><i class="fa fa-road" aria-hidden="true"></i> Desde Málaga a
+	      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+	    </div>
+	    <ul class="submenuItems">
+	      <li id="uno">Sevilla</li>
+	      <li id="dos">Cordoba</li>
+	      <li id="tres">Granada</li>
+				<li id="cuatro">Almería</li>
+	    </ul>
+	  </li>
+	  <li>
+	    <div class="dropdownlink"><i class="fa fa-paper-plane" aria-hidden="true"></i> Desde Sevilla a
+	      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+	    </div>
+	    <ul class="submenuItems">
+	      <li id="unos">Huelva</li>
+	      <li id="doss">Cádiz</li>
+	      <li id="tress">Jaén</li>
+				<li id="cuatros">Málaga</li>
+	    </ul>
+	  </li>
+	  <li>
+	    <div class="dropdownlink"><i class="fa fa-quote-left" aria-hidden="true"></i> Exteriores (Sevilla o Málaga)
+	      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+	    </div>
+	    <ul class="submenuItems">
+	      <li id="suno">Extremadura</li>
+	      <li id="sdos">Castilla la Mancha</li>
+	      <li id="stres">Murcia</li>
+	    </ul>
+	  </li>
+<li>(*click en los lugares para que aparezca la información)</li>
+	</ul>
+
+</div>
+
+
+
+
+<table class="derecha" id="malaga1">
+	<tr>
+		<th colspan="4">Sevilla</th>
+	</tr>
+	 <tr>
+	 	<th colspan="2">Servicio no Premium</th><th colspan="2">Servicio Premium</th>
+	 </tr>
+	 <tr>
+	 	<th>Precio</th><td>30.50€</td><th>Precio</th><td>80.00€</td>
+	 </tr>
+	 <tr>
+		<th>Selección de asientos</th><td>No</td><th>Selección de asientos</th><td>No</td>
+	 </tr>
+	 <tr>
+		<th>Comida y <br>contenido multimedia</th><td>No</td><th>Comida y <br>contenido multimedia</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Salidas</th><td><ul>
+			<li>08:00</li>
+			<li>15:00</li>
+			<li>19:00</li>
+		</ul> </td><th>Salidas</th><td><ul>
+			<li>08:00</li>
+			<li>12:30</li>
+			<li>15:00</li>
+			<li>17:00</li>
+			<li>19:30</li>
+
+		</ul> </td>
+	 </tr>
+</table>
+
+<table class="derecha" id="malaga2">
+	<tr>
+		<th colspan="4">Cordoba</th>
+	</tr>
+	 <tr>
+	 	<th colspan="2">Servicio no Premium</th><th colspan="2">Servicio Premium</th>
+	 </tr>
+	 <tr>
+	 	<th>Precio</th><td>25.50€</td><th>Precio</th><td>55.00€</td>
+	 </tr>
+	 <tr>
+		<th>Selección de asientos</th><td>Sí</td><th>Selección de asientos</th><td>No</td>
+	 </tr>
+	 <tr>
+		<th>Comida y <br>contenido multimedia</th><td>No</td><th>Comida y <br>contenido multimedia</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Salidas</th><td><ul>
+			<li>08:00</li>
+
+			<li>19:00</li>
+		</ul> </td><th>Salidas</th><td><ul>
+			<li>08:00</li>
+
+			<li>17:00</li>
+			<li>19:30</li>
+
+		</ul> </td>
+	 </tr>
+</table>
+<table class="derecha" id="malaga3">
+	<tr>
+		<th colspan="4">Granada</th>
+	</tr>
+	 <tr>
+	 	<th colspan="2">Servicio no Premium</th><th colspan="2">Servicio Premium</th>
+	 </tr>
+	 <tr>
+	 	<th>Precio</th><td>30.50€</td><th>Precio</th><td>50.00€</td>
+	 </tr>
+	 <tr>
+		<th>Selección de asientos</th><td>No</td><th>Selección de asientos</th><td>No</td>
+	 </tr>
+	 <tr>
+		<th>Comida y <br>contenido multimedia</th><td>No</td><th>Comida y <br>contenido multimedia</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Salidas</th><td><ul>
+
+			<li>15:00</li>
+			<li>19:00</li>
+		</ul> </td><th>Salidas</th><td><ul>
+
+			<li>12:30</li>
+			<li>15:00</li>
+			<li>17:00</li>
+			<li>19:30</li>
+
+		</ul> </td>
+	 </tr>
+</table>
+<table class="derecha" id="malaga4">
+	<tr>
+		<th colspan="4">Almería</th>
+	</tr>
+	 <tr>
+	 	<th colspan="2">Servicio no Premium</th><th colspan="2">Servicio Premium</th>
+	 </tr>
+	 <tr>
+	 	<th>Precio</th><td>30.50€</td><th>Precio</th><td>30.50€</td>
+	 </tr>
+	 <tr>
+		<th>Selección de asientos</th><td>No</td><th>Selección de asientos</th><td>No</td>
+	 </tr>
+	 <tr>
+		<th>Comida y <br>contenido multimedia</th><td>No</td><th>Comida y <br>contenido multimedia</th><td>No</td>
+	 </tr>
+	 <tr>
+		<th>Salidas</th><td><ul>
+			<li>08:00</li>
+
+		</ul> </td><th>Salidas</th><td><ul>
+			<li>08:00</li>
+
+
+		</ul> </td>
+	 </tr>
+</table>
+
+
+
+
+
+<script type="text/javascript">
+
+$( ".derecha" ).hide();
+
+$( ".dropdownlink" ).click(function() {
+	$( ".derecha" ).hide();
+});
+
+$( "#uno" ).click(function() {
+$( "#malaga1" ).fadeIn( 800 );
+$( "#malaga2" ).fadeOut( 200 );
+$( "#malaga3" ).fadeOut( 200 );
+$( "#malaga4" ).fadeOut( 200 );
+});
+$( "#dos" ).click(function() {
+$( "#malaga1" ).fadeOut( 200 );
+$( "#malaga2" ).fadeIn( 800 );
+$( "#malaga3" ).fadeOut( 200 );
+$( "#malaga4" ).fadeOut( 200 );
+});
+$( "#tres" ).click(function() {
+$( "#malaga1" ).fadeOut( 200 );
+$( "#malaga2" ).fadeOut( 200 );
+$( "#malaga3" ).fadeIn( 800 );
+$( "#malaga4" ).fadeOut( 200 );
+});
+$( "#cuatro" ).click(function() {
+$( "#malaga1" ).fadeOut( 200 );
+$( "#malaga2" ).fadeOut( 200 );
+$( "#malaga3" ).fadeOut( 200 );
+$( "#malaga4" ).fadeIn( 800 );
+});
+
+</script>
+<table class="derecha" id="sevilla1">
+	<tr>
+		<th colspan="4">Huelva</th>
+	</tr>
+	 <tr>
+	 	<th colspan="2">Servicio no Premium</th><th colspan="2">Servicio Premium</th>
+	 </tr>
+	 <tr>
+	 	<th>Precio</th><td>30.50€</td><th>Precio</th><td>30.50€</td>
+	 </tr>
+	 <tr>
+		<th>Selección de asientos</th><td>No</td><th>Selección de asientos</th><td>No</td>
+	 </tr>
+	 <tr>
+		<th>Comida y <br>contenido multimedia</th><td>No</td><th>Comida y <br>contenido multimedia</th><td>No</td>
+	 </tr>
+	 <tr>
+		<th>Salidas</th><td><ul>
+			<li>08:00</li>
+
+		</ul> </td><th>Salidas</th><td><ul>
+			<li>08:00</li>
+
+
+		</ul> </td>
+	 </tr>
+</table>
+<table class="derecha" id="sevilla2">
+	<tr>
+		<th colspan="4">Cádiz</th>
+	</tr>
+	 <tr>
+	 	<th colspan="2">Servicio no Premium</th><th colspan="2">Servicio Premium</th>
+	 </tr>
+	 <tr>
+	 	<th>Precio</th><td>30.50€</td><th>Precio</th><td>50.50€</td>
+	 </tr>
+	 <tr>
+		<th>Selección de asientos</th><td>No</td><th>Selección de asientos</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Comida y <br>contenido multimedia</th><td>No</td><th>Comida y <br>contenido multimedia</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Salidas</th><td><ul>
+			<li>08:00</li>
+	<li>17:00</li>
+		</ul> </td><th>Salidas</th><td><ul>
+			<li>08:00</li>
+
+			<li>17:00</li>
+			<li>19:30</li>
+
+
+		</ul> </td>
+	 </tr>
+</table>
+<table class="derecha" id="sevilla3">
+	<tr>
+		<th colspan="4">Jaén</th>
+	</tr>
+	 <tr>
+	 	<th colspan="2">Servicio no Premium</th><th colspan="2">Servicio Premium</th>
+	 </tr>
+	 <tr>
+	 	<th>Precio</th><td>30.50€</td><th>Precio</th><td>40.50€</td>
+	 </tr>
+	 <tr>
+		<th>Selección de asientos</th><td>No</td><th>Selección de asientos</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Comida y <br>contenido multimedia</th><td>No</td><th>Comida y <br>contenido multimedia</th><td>No</td>
+	 </tr>
+	 <tr>
+		<th>Salidas</th><td><ul>
+			<li>08:00</li>
+	<li>18:00</li>
+		</ul> </td><th>Salidas</th><td><ul>
+			<li>08:00</li>
+				<li>18:00</li>
+					<li>20:00</li>
+
+
+		</ul> </td>
+	 </tr>
+</table>
+<table class="derecha" id="sevilla4">
+	<tr>
+		<th colspan="4">Málaga</th>
+	</tr>
+	 <tr>
+	 	<th colspan="2">Servicio no Premium</th><th colspan="2">Servicio Premium</th>
+	 </tr>
+	 <tr>
+	 	<th>Precio</th><td>30.50€</td><th>Precio</th><td>80.00€</td>
+	 </tr>
+	 <tr>
+		<th>Selección de asientos</th><td>No</td><th>Selección de asientos</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Comida y <br>contenido multimedia</th><td>No</td><th>Comida y <br>contenido multimedia</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Salidas</th><td><ul>
+			<li>08:00</li>
+			<li>12:30</li>
+			<li>15:00</li>
+
+			<li>19:30</li>
+		</ul> </td><th>Salidas</th><td><ul>
+			<li>08:00</li>
+			<li>12:30</li>
+			<li>15:00</li>
+			<li>17:00</li>
+			<li>19:30</li>
+
+		</ul> </td>
+	 </tr>
+</table>
+
+<script type="text/javascript">
+
+$( ".derecha" ).hide();
+
+$( ".dropdownlink" ).click(function() {
+	$( ".derecha" ).hide();
+});
+
+$( "#unos" ).click(function() {
+$( "#sevilla1" ).fadeIn( 800 );
+$( "#sevilla2" ).fadeOut( 200 );
+$( "#sevilla3" ).fadeOut( 200 );
+$( "#sevilla4" ).fadeOut( 200 );
+});
+$( "#doss" ).click(function() {
+$( "#sevilla1" ).fadeOut( 200 );
+$( "#sevilla2" ).fadeIn( 800 );
+$( "#sevilla3" ).fadeOut( 200 );
+$( "#sevilla4" ).fadeOut( 200 );
+});
+$( "#tress" ).click(function() {
+$( "#sevilla1" ).fadeOut( 200 );
+$( "#sevilla2" ).fadeOut( 200 );
+$( "#sevilla3" ).fadeIn( 800 );
+$( "#sevilla4" ).fadeOut( 200 );
+});
+$( "#cuatros" ).click(function() {
+$( "#sevilla1" ).fadeOut( 200 );
+$( "#sevilla2" ).fadeOut( 200 );
+$( "#sevilla3" ).fadeOut( 200 );
+$( "#sevilla4" ).fadeIn( 800 );
+});
+
+</script>
+
+<table class="derecha" id="exte1">
+	<tr>
+		<th colspan="4">Extremadura</th>
+	</tr>
+	 <tr>
+	 	<th colspan="2">Servicio no Premium</th><th colspan="2">Servicio Premium</th>
+	 </tr>
+	 <tr>
+	 	<th>Precio</th><td>70.50€</td><th>Precio</th><td>100.50€</td>
+	 </tr>
+	 <tr>
+		<th>Selección de asientos</th><td>Sí</td><th>Selección de asientos</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Comida y <br>contenido multimedia</th><td>Sí</td><th>Comida y <br>contenido multimedia</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Salidas</th><td><ul>
+			<li>08:00</li>
+			<li>12:30</li>
+			<li>15:00</li>
+
+		</ul> </td><th>Salidas</th><td><ul>
+			<li>08:00</li>
+			<li>12:30</li>
+			<li>15:00</li>
+			<li>17:00</li>
+			<li>19:30</li>
+
+
+		</ul> </td>
+	 </tr>
+</table>
+<table class="derecha" id="exte2">
+	<tr>
+		<th colspan="4">Castilla la Mancha</th>
+	</tr>
+	 <tr>
+	 	<th colspan="2">Servicio no Premium</th><th colspan="2">Servicio Premium</th>
+	 </tr>
+	 <tr>
+	 	<th>Precio</th><td>70.50€</td><th>Precio</th><td>100.50€</td>
+	 </tr>
+	 <tr>
+		<th>Selección de asientos</th><td>Sí</td><th>Selección de asientos</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Comida y <br>contenido multimedia</th><td>Sí</td><th>Comida y <br>contenido multimedia</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Salidas</th><td><ul>
+			<li>08:00</li>
+			<li>12:30</li>
+			<li>15:00</li>
+			<li>17:00</li>
+			<li>19:30</li>
+		</ul> </td><th>Salidas</th><td><ul>
+			<li>08:00</li>
+			<li>12:30</li>
+			<li>15:00</li>
+			<li>17:00</li>
+			<li>19:30</li>
+
+
+		</ul> </td>
+	 </tr>
+</table>
+<table class="derecha" id="exte3">
+	<tr>
+		<th colspan="4">Murcia</th>
+	</tr>
+	 <tr>
+	 	<th colspan="2">Servicio no Premium</th><th colspan="2">Servicio Premium</th>
+	 </tr>
+	 <tr>
+	 	<th>Precio</th><td>70.50€</td><th>Precio</th><td>100.50€</td>
+	 </tr>
+	 <tr>
+		<th>Selección de asientos</th><td>Sí</td><th>Selección de asientos</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Comida y <br>contenido multimedia</th><td>Sí</td><th>Comida y <br>contenido multimedia</th><td>Sí</td>
+	 </tr>
+	 <tr>
+		<th>Salidas</th><td><ul>
+
+			<li>12:30</li>
+			<li>15:00</li>
+			<li>17:00</li>
+			<li>19:30</li>
+
+		</ul> </td><th>Salidas</th><td><ul>
+			<li>08:00</li>
+			<li>12:30</li>
+			<li>15:00</li>
+			<li>17:00</li>
+			<li>19:30</li>
+
+
+		</ul> </td>
+	 </tr>
+</table>
+<script type="text/javascript">
+
+$( ".derecha" ).hide();
+
+$( ".dropdownlink" ).click(function() {
+	$( ".derecha" ).hide();
+});
+
+$( "#suno" ).click(function() {
+$( "#exte1" ).fadeIn( 800 );
+$( "#exte2" ).fadeOut( 200 );
+$( "#exte3" ).fadeOut( 200 );
+
+});
+$( "#sdos" ).click(function() {
+$( "#exte1" ).fadeOut( 200 );
+$( "#exte2" ).fadeIn( 800 );
+$( "#exte3" ).fadeOut( 200 );
+
+});
+$( "#stres" ).click(function() {
+$( "#exte1" ).fadeOut( 200 );
+$( "#exte2" ).fadeOut( 200 );
+$( "#exte3" ).fadeIn( 800 );
+
+});
+
+
+</script>
+
+		</main>
+
+
+
+
+
+
+    <footer style="position: absolute; bottom: 0">
+        <img src="img/logo.jpg" alt="Footer Logo">
+        <span>Web de autobuses<br>JOSÉ ANTONIO CHAPARRO GARCÍA </span> <br>
+				<span>Iconos escogidos de <a href="https://www.flaticon.es/">Flacticon</a> </span>
+    </footer>
+
+</body>
+</html>
